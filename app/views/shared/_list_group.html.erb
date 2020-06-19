@@ -1,0 +1,37 @@
+<div class="list-group">
+  <% products.each do |product| %>
+  <li class="list-group-item">
+    <div class="d-flex w-100 justify-content-between">
+      <div class="d-flex align-items-center">
+        <h5 class="mb-0 mr-1"><%= product.name %></h5>
+        <% if product.tag %>
+        <%= image_tag "#{product.tag}.svg", class: "tag-img", title: product.tag.capitalize %>
+        <% end %>
+      </div>
+      <!-- Counter -->
+      <div class="mt-1 mb-3 item-counter">
+        <% item = Item.find_by(product: product, order: order) %>
+        <div class="input-group justify-content-end">
+          <div class="input-group-prepend">
+            <% if item %>
+            <%= link_to "-", product_item_path(product, item, counter_action: "decrement"), method: :put, class: "btn btn-sm btn-outline-danger" %>
+            <% else %>
+            <%= link_to "-", "", class: "btn btn-sm btn-outline-danger disabled" %>
+            <% end %>
+          </div>
+          <input class="text-center" value="<%= item&.quantity || 0 %>" disabled>
+          <div class="input-group-append">
+            <% if item %>
+            <%= link_to "+", product_item_path(product, item, counter_action: "increment"), method: :put, class: "btn btn-sm btn-outline-success #{item.quantity < 10 ? '' : 'disabled'}" %>
+            <% else %>
+            <%= link_to "+", product_items_path(product), product: product, method: :post, class: "btn btn-sm btn-outline-success" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mb-2"><%= product.description %></p>
+    <h6 class="text-secondary"><%= product.price %>€ <small>(~<%= (product.price * 1.12).round(2) %>$)</small></h6>
+  </li>
+  <% end %>
+</div>

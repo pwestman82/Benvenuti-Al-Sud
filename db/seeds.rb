@@ -99,6 +99,7 @@ antipasti = [
  	{ 
 		name: "Sauteed Spinach",
 		description: "Sautéed in Garlic and Oil",
+		price: 8.50,
 		tag: "vegan",
 	}
 ]

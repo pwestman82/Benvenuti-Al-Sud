@@ -7,11 +7,15 @@
   }
 
   .navbar-brand:hover {
-    transition: all 200ms;
+    transition: 200ms;
   }
 
   .navbar-collapse {
     flex-grow: 0;
+  }
+
+  .nav-link.text-success {
+    transition: 200ms;
   }
 
   .avatar {
