@@ -1,0 +1,26 @@
+#home {
+  min-height: calc(100vh - 62px);
+}
+
+#home-banner {
+  height: calc(100vh - 62px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .card-image {
+    max-height: 200px;
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    font-size: 17px;
+    color: #444;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+  }
+}

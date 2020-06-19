@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home">
+  <section id="home-banner" style="background-image: url(<%= asset_path 'bg-home.jpeg' %>)">
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-12 col-md-10 col-lg-8 col-md-6">
+          <div class="card text-center">
+            <div class="card-body">
+              <%= image_tag "chef.gif", class: "card-image" %>
+              <h3 class="card-title text-danger">Welcome to Benvenuto Al Sud</h3>
+              <p class="card-text">
+                Established in 1982 by Francesco Pozzuoli, who is originally from Naples, Italy, the birthplace of pizza, Benvenuto Al Sud has been a local favorite for more than 35 years.
+                We only use the highest quality, fresh, whole, natural ingredients in all of our products, and satisfy any kind of palate.
+              </p>
+              <p class="card-text"></p>
+              <%= link_to "See our menu", "#", class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
