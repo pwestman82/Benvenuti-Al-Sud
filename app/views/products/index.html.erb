@@ -1,0 +1,73 @@
+<section id="products">
+  <!-- Pizza -->
+  <div class="pizzas pb-4">
+    <h3 class="pt-2">🍕 Pizza</h3>
+    <p>Our most famous pizzas, now available to order online</p>
+    <div class="list-group">
+      <% @pizzas.each do |pizza| %>
+        <li class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0 mr-1"><%= pizza.name %></h5>
+              <% if pizza.tag %>
+                <%= image_tag "#{pizza.tag}.svg", class: "tag-img", title: pizza.tag.capitalize %>
+              <% end %>
+            </div>
+            <!-- TODO: add counter -->
+            <p><%= pizza.price %>€ <small>(~<%= (pizza.price * 1.12).round(2) %>$)</small></p>
+          </div>
+          <p class="mb-2"><%= pizza.description %></p>
+          <h6 class="text-secondary"><%= pizza.price %>€ <small>(≃<%= (pizza.price * 1.12).round(2) %>$)</small></h6>
+        </li>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Pasta -->
+  <div class="pastas pb-4">
+    <h3>🍝 Pasta</h3>
+    <p>All homemade pasta, with the original italian taste</p>
+    <div class="list-group">
+      <% @pastas.each do |pasta| %>
+        <li class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0 mr-1"><%= pasta.name %></h5>
+              <% if pasta.tag %>
+                <%= image_tag "#{pasta.tag}.svg", class: "tag-img", title: pasta.tag.capitalize %>
+              <% end %>
+            </div>
+            <!-- TODO: add counter -->
+            <p><%= pasta.price %>€ <small>(~<%= (pasta.price * 1.12).round(2) %>$)</small></p>
+          </div>
+          <p class="mb-2"><%= pasta.description %></p>
+          <h6 class="text-secondary"><%= pasta.price %>€ <small>(≃<%= (pasta.price * 1.12).round(2) %>$)</small></h6>
+        </li>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Antipasti -->
+  <div class="antipasti pb-4">
+    <h3>🍲 Antipasti</h3>
+    <p>Treat yourself with our typical napolitan's antipasti</p>
+    <div class="list-group">
+      <% @antipasti.each do |antipasto| %>
+        <li class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <div class="d-flex align-items-center">
+              <h5 class="mb-0 mr-1"><%= antipasto.name %></h5>
+              <% if antipasto.tag %>
+                <%= image_tag "#{antipasto.tag}.svg", class: "tag-img", title: antipasto.tag.capitalize %>
+              <% end %>
+            </div>
+            <!-- TODO: add counter -->
+            <p><%= antipasto.price %>€ <small>(~<%= (antipasto.price * 1.12).round(2) %>$)</small></p>
+          </div>
+          <p class="mb-2"><%= antipasto.description %></p>
+          <h6 class="text-secondary"><%= antipasto.price %>€ <small>(≃<%= (antipasto.price * 1.12).round(2) %>$)</small></h6>
+        </li>
+      <% end %>
+    </div>
+  </div>
+</section>

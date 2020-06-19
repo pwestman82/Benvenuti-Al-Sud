@@ -45,7 +45,7 @@ pizzas = [
 	},
   { 
 		name: "Nduja",
-		description: "Calabrian Hot Spreadable Salame, Red Onions, Calabrian Pecorino, Mozzarella Bufala, tomato sauce, basil, Terre Francescane Organic EVOO",
+		description: "Calabrian Hot Spreadable Salame, Red Onions, Calabrian Pecorino, Mozzarella Bufala, Tomato Sauce, Basil, Terre Francescane Organic EVOO",
 		price: 12.99,
 	}
 ]
@@ -60,18 +60,18 @@ puts "Creating pastas..."
 pastas = [
 	{ 
 		name: "Pappardelle con Cinghiale",
-		description: "Wide flat pasta, spiced wild boar ragu",
+		description: "Wide Flat Pasta, Spiced Wild Boar Ragù",
 		price: 11.99,
 	},
 	{ 
 		name: "Ravoli Quattro Formaggi",
-		description: "Four cheese ravioli, pine nuts, butter, Marsala glaze, parmesan curls",
+		description: "Four Cheese Ravioli, Pine Nuts, Butter, Marsala Glaze, Parmesan Curls",
 		price: 8.99,
 		tag: "vegetarian",
 	},
  	{ 
 		name: "Gnocchi",
-		description: "Potato dumplings, cherry tomatoes, garlic, spinach, Gorgonzola DOP",
+		description: "Potato Dumplings, Cherry Tomatoes, Garlic, Spinach, Gorgonzola DOP",
 		price: 9.99, 
 		tag: "vegetarian",
 	}
@@ -87,18 +87,18 @@ puts "Creating antipasti..."
 antipasti = [
 	{ 
 		name: "Bruschetta",
-		description: "Mixture of tomatoes, garlic, romano cheese, basil and extra virgin olive oil served over toasted Italian bread",
+		description: "Mixture of Tomatoes, Garlic, Romano Cheese, Basil and Extra Virgin Olive Oil served over Toasted Italian Bread",
 		price: 6.99,
 		tag: "vegetarian",
 	},
 	{ 
 		name: "Calamari", 
-		description: "Breaded in our special seasoned batter and pan fried in vegetable oil",
+		description: "Breaded in our Special Seasoned Butter and Pan Fried in Vegetable Oil",
 		price: 9.99,
 	},
  	{ 
 		name: "Sauteed Spinach",
-		description: "Sautéed in garlic and oil",
+		description: "Sautéed in Garlic and Oil",
 		tag: "vegan",
 	}
 ]
