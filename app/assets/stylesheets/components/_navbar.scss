@@ -6,6 +6,10 @@
     width: 36px;
   }
 
+  .navbar-brand:hover {
+    transition: all 200ms;
+  }
+
   .navbar-collapse {
     flex-grow: 0;
   }

@@ -8,6 +8,15 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// General rules
+body {
+  min-height: 100vh;
+
+  #content {
+    min-height: calc(100vh - 62px - 155px); // = 100vh - $navbar-height - $footer-height
+  }
+}
+
 // CSS partials
 @import "components/index";
 @import "pages/index";
