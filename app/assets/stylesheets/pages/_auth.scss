@@ -1,0 +1,15 @@
+#auth {
+  min-height: calc(100vh - 62px - 155.2px); // = $device-height - $navbar - $footer
+
+  .card {
+    margin: 40px;
+  }
+
+  .card-body {
+    padding: 20px 60px;
+  }
+
+  .form-inputs, .form-actions {
+    padding: 0 60px;
+  }
+}

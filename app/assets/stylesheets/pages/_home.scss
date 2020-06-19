@@ -1,9 +1,5 @@
-#home {
-  min-height: calc(100vh - 62px); // 100vh - $navbar-height
-}
-
 #home-banner {
-  height: calc(100vh - 62px);
+  height: calc(100vh - 62px); // = $device-height - $navbar-height
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -14,7 +10,7 @@
   }
 
   .card-text {
-    font-size: 17px;
+    font-size: 16.5px;
     color: #444;
   }
 
