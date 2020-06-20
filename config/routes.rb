@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :products, only: [:index] do
     resources :items, only: [:create, :update, :delete]
   end
+  get "/cart", to: "pages#cart", as: :cart
 end

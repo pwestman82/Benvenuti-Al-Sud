@@ -4,8 +4,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create(quantity: 1, product: @product, order: @order)
-
-    redirect_to products_path
+    
+    flash[:notice] = "Cart successfully updated"
+    redirect_back(fallback_location: products_path)
   end
 
   def update
@@ -14,14 +15,11 @@ class ItemsController < ApplicationController
       @item.save
     else
       @item.quantity -= 1
-      if @item.quantity == 0
-        @item.destroy
-      else
-        @item.save
-      end
+      @item.quantity == 0 ?  @item.destroy : @item.save
     end
 
-    redirect_to products_path
+    flash[:notice] = "Cart successfully updated"
+    redirect_back(fallback_location: products_path)
   end
 
   private

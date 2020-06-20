@@ -3,20 +3,20 @@
   <div class="pizzas pb-4">
     <h3 class="pt-2">🍕 Pizza</h3>
     <p>Our most famous pizzas, now available to order online</p>
-    <%= render "shared/list_group", products: @pizzas, order: @order %>
+    <%= render "shared/list_group", scope: "menu", products: @pizzas, order: @order %>
   </div>
 
   <!-- Pasta -->
   <div class="pastas pb-4">
     <h3>🍝 Pasta</h3>
     <p>All homemade pasta, with the original italian taste</p>
-    <%= render "shared/list_group", products: @pastas, order: @order %>
+    <%= render "shared/list_group", scope: "menu", products: @pastas, order: @order %>
   </div>
 
   <!-- Antipasti -->
   <div class="antipasti pb-4">
     <h3>🍲 Antipasti</h3>
     <p>Treat yourself with our typical napolitan's antipasti</p>
-    <%= render "shared/list_group", products: @antipasti, order: @order %>
+    <%= render "shared/list_group", scope: "menu", products: @antipasti, order: @order %>
   </div>
 </section>

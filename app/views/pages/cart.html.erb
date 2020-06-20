@@ -1,0 +1,5 @@
+<section id="cart" class="pb-4">
+  <h3 class="pt-2">🛒 Your cart</h3>
+  <p>Order now, or switch back to the menu to add other products</p>
+  <%= render "shared/list_group", scope: "cart", products: @order.items.map(&:product), order: @order %>
+</section>
