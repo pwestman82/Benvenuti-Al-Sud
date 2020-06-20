@@ -18,3 +18,5 @@ rails s # launch a local server
 ```	
 
 2. Go to http://localhost:3000 to see the website in action
+
+3. Please find a representation of the database here https://dbdiagram.io/d/5eee924e9ea313663b3ad5be
