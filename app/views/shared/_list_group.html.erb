@@ -1,5 +1,9 @@
 <div class="list-group">
   <% products.each do |product| %>
+    <!-- Find the correspondent item and calculate price -->
+    <% item = Item.find_by(product: product, order: order) %>
+    <% price = scope == "cart" ? product.price * item.quantity : product.price %>
+
     <li class="list-group-item">
       <div class="d-flex w-100 justify-content-between">
         <div class="d-flex align-items-center">
@@ -10,7 +14,6 @@
         </div>
         <!-- Counter -->
         <div class="mt-1 mb-3 item-counter">
-          <% item = Item.find_by(product: product, order: order) %>
           <div class="input-group justify-content-end">
             <div class="input-group-prepend">
               <% if item %>
@@ -34,7 +37,6 @@
         <p class="mb-2"><%= product.description %></p>
       <% end %>
       <h6 class="text-secondary">
-        <% price = scope == "cart" ? product.price * item.quantity : product.price %>
         <%= price %>€ <small>(<%= (price * 1.12).round(2) %>$)</small>
       </h6>
     </li>

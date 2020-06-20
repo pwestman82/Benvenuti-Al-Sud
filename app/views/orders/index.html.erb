@@ -1,0 +1,32 @@
+<section id="orders">
+  <section id="cart" class="pb-4">
+    <h3 class="pt-2">🥡 Your orders</h3>
+    <% if @orders.empty? %>
+      <p>You don't have any order yet</p>
+      <%= link_to "Check the menu", products_path, class: "btn btn-success" %>
+    <% else %>
+      <p>Check your orders' status here</p>
+      <div class="list-group">
+        <% @orders.each_with_index do |order, index| %>
+          <!-- Calculate total -->
+          <% total = order.subtotal + order.delivery_cost %>
+          <div class="list-group-item">
+            <div class="d-flex w-100 justify-content-between mb-2">
+              <!-- First order in preparation -->
+              <% if index == 0 %>
+                <h5 class="mb-1 text-danger">In preparation</h5>
+              <% else %>
+                <h5 class="mb-1 text-success">Delivered</h5>
+              <% end %>
+              <small><%= total %>€</small>
+            </div>
+            <ul>
+              <% order.items.each do |item| %>
+                <li><%= item.quantity %> x <%= item.product.category.capitalize %> <%= item.product.name %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </section>

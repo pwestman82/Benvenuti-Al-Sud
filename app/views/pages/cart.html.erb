@@ -1,5 +1,39 @@
 <section id="cart" class="pb-4">
   <h3 class="pt-2">🛒 Your cart</h3>
-  <p>Order now, or switch back to the menu to add other products</p>
-  <%= render "shared/list_group", scope: "cart", products: @order.items.map(&:product), order: @order %>
+  <% if @items.empty? %>
+    <p>You currently don't have any product in your card</p>
+    <%= link_to "Check the menu", products_path, class: "btn btn-success" %>
+  <% else %>
+    <p>Order now your food, or switch back to the menu to add other products</p>
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <%= render "shared/list_group", scope: "cart", products: @products, order: @order %>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <%= link_to "Order now", order_path(@order), method: :put, class: "btn btn-success text-white w-100 mb-3", data: { confirm: "Are you sure you want to submit this order?" } %>
+            <div class="d-flex justify-content-between">
+              <h6 class="mb-1">Total</h6>
+              <h6 class="mb-1">
+                <%= @total %>€ <small>(<%= (@total * 1.12).round(2) %>$)</small>
+              </h6>
+            </div>
+            <div class="text-muted d-flex justify-content-between">
+              <small>Subtotal</small>
+              <small><%= @order.subtotal %>€</small>
+            </div>
+            <div class="text-muted d-flex justify-content-between">
+              <small>Delivery cost</small>
+              <small><%= @order.delivery_cost %>€</small>
+            </div>
+            <small class="card-subtitle text-danger">
+              <%= icon("fas", "clock") %>
+              Your order will be ready in about <%= [15, 30, 45].sample %> minutes
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </section>

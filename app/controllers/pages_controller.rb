@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   end
 
   def cart
-    @items = @order.items.filter { |item| item.quantity > 0 }
+    @items = @order.items.order(:created_at).filter { |item| item.quantity > 0 }
+    @products = @items.map(&:product)
+    @total = @order.subtotal + @order.delivery_cost
   end
 end

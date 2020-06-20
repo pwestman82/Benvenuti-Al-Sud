@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(_user)
     last_order = current_user.orders.last
-    order = !last_order || last_order.completed ? Order.create(user: current_user) : last_order
+    order = !last_order || last_order.completed ? Order.create(user: current_user, delivery_cost: 4.99) : last_order
     session[:order_id] = order.id
     products_path
   end

@@ -8,6 +8,11 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// General rules
+.turbolinks-progress-bar {
+  background-color: $green;
+}
+
 // CSS partials
 @import "components/index";
 @import "pages/index";
