@@ -2,7 +2,7 @@
   <section id="cart" class="pb-4">
     <h3 class="pt-2">🥡 Your orders</h3>
     <% if @orders.empty? %>
-      <p>You don't have any order yet</p>
+      <p>You don't have any orders yet</p>
       <%= link_to "Check the menu", products_path, class: "btn btn-success" %>
     <% else %>
       <p>Check your orders' status here</p>

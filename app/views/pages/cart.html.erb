@@ -1,10 +1,10 @@
 <section id="cart" class="pb-4">
   <h3 class="pt-2">🛒 Your cart</h3>
   <% if @items.empty? %>
-    <p>You currently don't have any product in your card</p>
+    <p>You currently don't have any products in your cart</p>
     <%= link_to "Check the menu", products_path, class: "btn btn-success" %>
   <% else %>
-    <p>Order now your food, or switch back to the menu to add other products</p>
+    <p>Order your food now, or switch back to the menu to add other products</p>
     <div class="row">
       <div class="col-12 col-md-8">
         <%= render "shared/list_group", scope: "cart", products: @products, order: @order %>
