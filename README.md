@@ -1,6 +1,6 @@
 # Benvenuti Al Sud
 
-> See it [live here 🌐](https://benvenutialsud.herokuapp.com)
+> See it [live here 🌐](https://benvenuti-al-sud.herokuapp.com)
 
 **Benvenuti Al Sud** is a web-based Italian restaurant delivery application. It currently does not process payments, although in the future may be integrated with [Stripe](https://stripe.com/) or a similar service.
 
