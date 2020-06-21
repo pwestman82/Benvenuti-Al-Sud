@@ -5,7 +5,7 @@
       <p>You don't have any orders yet</p>
       <%= link_to "Check the menu", products_path, class: "btn btn-success" %>
     <% else %>
-      <p>Check your orders' status here</p>
+      <p>Check your order's status here</p>
       <div class="list-group">
         <% @orders.each_with_index do |order, index| %>
           <!-- Calculate total -->
